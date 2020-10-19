@@ -19,6 +19,8 @@ import "./appStyles.css";
 import styles from "./appStyles.module.css";
 import Form from "./components/Form";
 import ParentComp from "./components/ParentComp";
+import Hero from "./components/Hero";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
@@ -48,8 +50,17 @@ function App() {
       <ParentComponent />
       <UserGreeting />
       <NameList />
-      <Form />*/}
-      <ParentComp />
+      <Form />
+      <ParentComp />*/}
+      <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary>
     </div>
   );
 }

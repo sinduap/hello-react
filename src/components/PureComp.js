@@ -9,4 +9,6 @@ class PureComp extends PureComponent {
 
 export default PureComp;
 
-// Performance boost
+// Pure component compare new state to existing state,
+// if there any shallow comparison, then its never re render
+// hence boosting performance
